@@ -1,0 +1,57 @@
+.card {
+  margin: 20px auto;
+}
+
+.upcoming_events .card {
+  margin-top: 0;
+}
+
+.selected_categories p {
+  color: #2EC4B6;
+}
+
+.selected_categories span {
+  color: #2EC4B6;
+}
+
+.upcoming_events .title {
+  color: #2EC4B6;
+}
+
+.month_bar {
+  height: 50px;
+  background-color: #ffffff;
+  opacity: 0.7;
+  margin: 10px 0;
+  padding: 0;
+  width: 100vw; /* 画面幅いっぱい */
+  position: relative;
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
+.month_bar .calnder_select i {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+}
+
+.month_bar h3 {
+  color: #2EC4B6;
+  
+}
+
+.event_country {
+  color: #2EC4B6;
+}
+
+.event_picture img {
+  width: 100%;
+  max-height: 35vh;
+  object-fit: cover;
+}
+
+.event_picture img:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s; /* アニメーションの滑らかさ */
+}

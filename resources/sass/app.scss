@@ -1,0 +1,124 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+
+// Backgrounds
+body.welcome_bg {
+  background: linear-gradient(#2EC4B6, #FFBF69);
+  min-height: 100vh;
+}
+
+body.view_bg {
+  background: linear-gradient(#CBF3F0, #FFBF69);
+  min-height: 100vh;
+}
+
+// body.set_edit_bg {
+
+// } 
+
+
+// Navbar
+.navbar {
+  background-color: #2EC4B6;
+  color: #ffffff; /* テキストの色 */
+    a{
+        color: #ffffff;
+        &:hover {
+            color: #d4d4d4; /* ホバー時の色 */
+        }
+    }
+}
+
+/* スマホでも横並びにする */
+@media (max-width: 767px) {
+  .navbar-nav.d-flex {
+      flex-direction: row !important; /* 画面サイズが小さくても横並びを維持 */
+  }
+}
+
+.app_name h1 {
+  text-align: center;
+}
+
+
+
+
+
+
+// Buttons
+button {
+  width: 280px;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.buttons {
+  text-align: center;
+}
+.button_trans button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  outline: solid;
+}
+
+.button_trans button:hover {
+  background-color: #ffffff57;
+}
+
+.button_white button {
+  background-color: #ffffff;
+  color: #2EC4B6;
+  border: none;
+  outline: none;
+}
+
+.button_white button:hover {
+  background-color: #ffffffb1;
+}
+
+
+// Back Button
+.back_button a {
+  color: #2EC4B6;
+  text-decoration: none;
+  font-size: 24px;
+  position: absolute; /* 絶対位置指定 */
+  top: 70px; 
+  right: 20px; 
+  z-index: 1050; /* navbarより前面に表示 */
+}
+
+.back_button a:hover {
+  opacity: 0.7;
+}
+
+
+// a タグ
+a {
+  text-decoration: none;
+}
+
+.event_name a {
+  color: black;
+}
+
+.event_name a:hover {
+  opacity: 0.5;
+}
+
+.country_name a:hover {
+  opacity: 0.7;
+}
+
+
+
+

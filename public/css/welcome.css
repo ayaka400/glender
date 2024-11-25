@@ -1,0 +1,90 @@
+/* welcome.blade.php------------------------- */
+
+.welcome_container h1 {
+  color: #ffffff;
+  font-size: 55px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-top: 150px;
+}
+
+.welcome_container .buttons {
+  margin-top: 350px;
+}
+
+.welcome_container .button_trans  button{
+  margin-bottom: 10px;
+}
+
+
+/* register.blade.php/login.blade.php---------*/
+.register_container h2 {
+  font-size: 30px;
+  margin-top: 130px;
+}
+
+.register_container form {
+  width: 280px;
+  margin-top: 50px;
+}
+
+.user_form label {
+  color: #ffffff;
+}
+
+.user_form input {
+  color: #ffffff;
+  height: 50px;
+  outline: none;
+  border: solid #ffffffaf 1.5px;
+  background-color: transparent;
+}
+
+.user_form input:focus {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+
+/* country_selection.blade.php---------*/
+.country_select_container {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.country_select_container h3 {
+  font-size: 20px;
+  margin: 100px auto 40px;
+  color: #ffffff;
+  max-width: 80%;
+}
+
+.country_select_container label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.country_select_container label:hover {
+  opacity: 80%;
+}
+
+.country_select_container input {
+  cursor: pointer;
+}
+
+.country_select_container form {
+  color: #ffffff;
+}
+
+.flag-sm {
+  width: 80px;
+  height: 50px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.flag-sm:hover {
+  opacity: 80%;
+}
+

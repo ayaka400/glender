@@ -1,0 +1,39 @@
+.card_container{
+  margin: 20px 10px 0;
+}
+
+.card {
+  padding: 15px;
+}
+
+.title h2 {
+  font-size: 30px;
+  margin: 10px auto;
+}
+
+.title h5 {
+  margin-top: 10px;
+  color: #2EC4B6;
+  font-size: 22px;
+}
+
+
+
+img {
+  margin: 0 0 20px;
+  border-radius: 8px;
+}
+
+.event_container h4 {
+  color: #28aa9d;
+  font-size:18px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.card_container .greeting {
+  margin: 0;
+  background-color: #8edcd540;
+}
