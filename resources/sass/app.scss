@@ -19,9 +19,10 @@ body.view_bg {
   min-height: 100vh;
 }
 
-// body.set_edit_bg {
-
-// } 
+body.set_edit_bg {
+  background: linear-gradient(#CBF3F0, #FFDEB1);
+  min-height: 100vh;
+} 
 
 
 // Navbar
@@ -85,6 +86,17 @@ button {
   background-color: #ffffffb1;
 }
 
+.button_green button {
+  background-color: #2EC4B6;
+  color: #ffffff;
+  border: none;
+  outline: none;
+}
+
+.button_green button:hover {
+  opacity: 0.7;
+}
+
 
 // Back Button
 .back_button a {
@@ -107,6 +119,11 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 .event_name a {
   color: black;
 }
@@ -118,7 +135,5 @@ a {
 .country_name a:hover {
   opacity: 0.7;
 }
-
-
 
 

@@ -33,7 +33,7 @@
 
             <!-- setting icon -->
             <a  href="#" class="nav-link d-flex align-items-center setting">
-                <i class="fa-solid fa-user me-3 fa-lg"></i>
+                <i class="fa-solid fa-gear me-3 fa-lg"></i>
             </a>
 
    

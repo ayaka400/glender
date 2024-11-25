@@ -4,7 +4,7 @@
 @section('body-class', 'welcome_bg')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/welcome.css')}}">
+<link rel="stylesheet" href="{{ asset('css/welcomes.css')}}">
 @endsection
 
 @section('title', 'Select Country')
