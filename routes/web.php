@@ -24,6 +24,21 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/event', [App\Http\Controllers\EventController::class, 'index'])->name('event');
 
 
+    // Settings
+    Route::get('/setting', function () {
+        return view('settings.setting');
+    });
+
+    Route::get('/country_setting', function () {
+        return view('settings.country_setting');
+    });
+
+    Route::get('/user_setting', function () {
+        return view('settings.user_setting');
+    });
+
+
+
 });
 
 
