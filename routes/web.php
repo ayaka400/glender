@@ -38,7 +38,37 @@ Route::group(['middleware' => 'auth'], function(){
     });
 
 
+    // Countries
+    Route::get('/country', function () {
+        return view('countries.country');
+    });
 
+    Route::get('/add_country', function () {
+        return view('countries.add_country');
+    });
+
+    Route::get('/update_country', function () {
+        return view('countries.update_country');
+    });
+
+
+      // Edit Events
+    Route::get('/edit_event_top', function () {
+        return view('edit_events.edit_event_top');
+    });
+
+    Route::get('/select_event', function () {
+        return view('edit_events.select_event');
+    });
+
+    Route::get('/add_event', function () {
+        return view('edit_events.add_event');
+    });
+
+    Route::get('/update_event', function () {
+        return view('edit_events.update_event');
+    });
 });
+
 
 

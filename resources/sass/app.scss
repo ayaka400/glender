@@ -55,7 +55,6 @@ body.set_edit_bg {
 
 // Buttons
 button {
-  width: 280px;
   height: 50px;
   border-radius: 8px;
   font-size: 16px;
@@ -65,6 +64,7 @@ button {
   text-align: center;
 }
 .button_trans button {
+  width: 280px;
   background-color: transparent;
   color: #ffffff;
   border: none;
@@ -76,6 +76,15 @@ button {
 }
 
 .button_white button {
+  width: 280px;
+  background-color: #ffffff;
+  color: #2EC4B6;
+  border: none;
+  outline: none;
+}
+
+.button_white_sm button {
+  width: 100%;
   background-color: #ffffff;
   color: #2EC4B6;
   border: none;
@@ -86,7 +95,20 @@ button {
   background-color: #ffffffb1;
 }
 
+.button_white_sm button:hover {
+  background-color: #ffffffb1;
+}
+
 .button_green button {
+  width: 280px;
+  background-color: #2EC4B6;
+  color: #ffffff;
+  border: none;
+  outline: none;
+}
+
+.button_green_sm button {
+  width: 100%;
   background-color: #2EC4B6;
   color: #ffffff;
   border: none;
@@ -94,6 +116,10 @@ button {
 }
 
 .button_green button:hover {
+  opacity: 0.7;
+}
+
+.button_green_sm button:hover {
   opacity: 0.7;
 }
 
@@ -137,3 +163,76 @@ a:hover {
 }
 
 
+// Form
+.form_container {
+  display: flex;
+  justify-content: center;
+}
+
+.form_container form {
+  width: 80%;
+  max-width: 500px;
+}
+
+.form_container input {
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 4px #00000033;
+}
+
+.form_img input {
+  background-color: #ffffff;
+}
+
+textarea {
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 4px #00000033;
+  padding: 0 10px;
+}
+
+.form_container select {
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 4px #00000033;
+  height: 35px;
+  padding: 0 10px;
+}
+
+// .form_sm input {
+//   // width: 80%;
+//   margin-bottom: 20px;
+//   height: 35px;
+// }
+
+.form_md input {
+  width:100%;
+  height: 35px;
+  padding: 0 10px;
+}
+
+.form_md {
+  display: flex;
+  flex-direction: column; /* 子要素を縦に並べる */
+  margin-bottom: 1rem; /* 適度な間隔を追加 */
+}
+
+.form_md label {
+  margin-bottom: 0.5rem; /* ラベルと入力欄の間に余白を追加 */
+}
+
+textarea {
+  width: 100%;
+}
+
+label.required {
+  display: inline;  /* 幅を固定するためにブロック化 */
+  width: 120px;           /* ラベルの幅を統一 */
+  text-align: left;       /* 左揃え */
+}
+
+.required::before {
+  content: " *"; /* 必須マークを追加 */
+  color: red;    /* 色を赤に */
+  font-weight: bold;
+}

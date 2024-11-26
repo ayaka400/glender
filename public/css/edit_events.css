@@ -1,0 +1,46 @@
+/* edit_event_top.blade.php------------------ */
+.edit_event_container .page_title i {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #00000033;
+  margin-right: 10px;
+}
+
+.edit_event_selection {
+  margin-top: 30vh;
+  font-size: 22px;
+}
+
+/* select_event_country.blade.php------------------ */
+.select_event_countainer {
+  padding: 0 20px !important;
+}
+
+.select_event_countainer select {
+  width: 200px;
+}
+
+.select_event_countainer select {
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 4px #00000033;
+  height: 30px;
+  padding: 10px 0;
+}
+
+
+/* small_events */
+.event_country {
+  color: #2EC4B6;
+}
+
+.event_picture img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.event_picture img:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s; /* アニメーションの滑らかさ */
+}
+
