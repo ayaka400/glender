@@ -11,7 +11,7 @@
 @section('content')
     <div class="select_event_countainer mt-4">
         <div class="back_button mt-2">
-          <a href="#">< Back</a>
+          <a href="javascript:history.go(-1)">< Back</a>
         </div>
         <h2 class="ms-2 mb-0">作成したイベントの編集</h2>
         <p class="ms-3 mt-4 ">編集したいイベントを選択してください。</p>

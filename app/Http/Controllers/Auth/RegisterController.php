@@ -26,9 +26,13 @@ class RegisterController extends Controller
     /**
      * Where to redirect users after registration.
      *
-     * @var string
+     * @return string
      */
-    protected $redirectTo = '/country_selection';
+    protected function redirectTo()
+    {
+        // Routeヘルパーを利用してルート名からURLを生成
+        return route('country-selection.index');
+    }
 
     /**
      * Create a new controller instance.

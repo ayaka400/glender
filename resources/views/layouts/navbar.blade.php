@@ -32,7 +32,7 @@
             </a>
 
             <!-- setting icon -->
-            <a  href="#" class="nav-link d-flex align-items-center setting">
+            <a  href="{{ route('setting') }}" class="nav-link d-flex align-items-center setting">
                 <i class="fa-solid fa-gear me-3 fa-lg"></i>
             </a>
 
@@ -42,12 +42,3 @@
   </div>
 </nav>
 
-{{-- ユーザページにログアウトボタン --}}
-{{-- <a class="nav-link ms-3" href="{{ route('logout') }}"
-onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
- <i class="fa-solid fa-right-from-bracket icon_sm"></i> Logout
-</a>
-
-<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
- @csrf
-</form> --}}

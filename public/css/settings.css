@@ -6,7 +6,7 @@
 }
 
 .setting_selection {
-  margin-top: 30vh;
+  margin-top: 25vh;
   font-size: 22px;
 }
 
@@ -68,6 +68,10 @@
 
 .country_select_container .country_desc a:hover {
   opacity: 0.5;
+}
+
+.country_edit_link i {
+  color: #2EC4B6;
 }
 
 

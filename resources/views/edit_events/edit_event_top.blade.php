@@ -11,6 +11,9 @@
 @section('content')
     <div class="edit_event_container">
       <div class="page_title">
+          <div class="back_button mt-2">
+            <a href="javascript:history.go(-1)">< Back</a>
+          </div>
           <h2 class="ms-3 fs-1">
             <i class="fa-solid fa-gear text-white"></i> イベントの編集
           </h2>

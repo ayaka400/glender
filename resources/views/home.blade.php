@@ -14,23 +14,24 @@
     <div class="row justify-content-center">
         <div class="col-11">
         {{-- 選択中の国表示--}}
-            <div class="selected_categories row">
-               <div class="col-auto pe-0 ps-3">
-                    <p class="me-0 d-flex">選択中の国：</p>
-               </div>
-                <div class="col-auto country_badge">
-                    @foreach (range(1, 2) as $i) 
-                    <a href="#">
-                        <span class="badge bg-white rounded-pill shadow-sm text-start me-2 fs-6">country{{ $i }}</span>
-                    </a>
-                    @endforeach
-                </div>
+        <div class="selected_countries row">
+            <div class="col-auto pe-0 ps-3">
+                 <p class="me-0 d-flex">選択中の国：</p>
             </div>
+             <div class="col-auto country_badge">
+                 {{-- 選択された国をバッジとして表示 --}}
+                 @foreach ($countries as $country)
+                     <a href="{{ route('countries.show', $country->id) }}">
+                         <span class="badge bg-white rounded-pill shadow-sm text-start me-2 fs-6">{{ $country->country_name }}</span>
+                     </a>
+                 @endforeach
+             </div>
+         </div>
 
         {{-- 間近の祝日 --}}
             <div class="card border-0 shadow-sm upcoming_events">
                 <div class="card-body">
-                   <p class="title mb-0">今後2週間の祝日・行事</p>
+                   <p class="title mb-0 fw-bold">今後2週間の祝日・行事</p>
                    @foreach (range(1, 2) as $i)
                         <p class="event_date my-0 py-0">2024/11/20</p>
                         <p class="event_name mb-0 pb-0 fw-bold">〜〜祭り<span> （国{{ $i }}) </span></p>

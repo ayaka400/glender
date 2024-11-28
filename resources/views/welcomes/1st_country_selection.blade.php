@@ -12,18 +12,18 @@
 @section('content')
     <div class="country_select_container text-center">
           <h3>祝日や行事をチェックしたい国を選んでみましょう。<br>（複数選択可）</h3>
-        <form action="#" method="POST">
+        <form action="{{ route('country-selection.store') }}" method="POST">
           @csrf
           
           <div class="row d-flex justify-content-center country_option">
-              @foreach (range(1, 6) as $i)  {{-- 1から6まで繰り返す --}}
+              @foreach ($countries as $country) 
                   <div class="col-5 mb-3 d-flex justify-content-center">
                       <div class="form-check d-flex align-items-center">
-                          <input class="form-check-input" type="checkbox" name="country" id="country{{ $i }}" value="{{ $i }}">
-                          <label class="form-check-label" for="country{{ $i }}">
-                              国{{ $i }}
+                          <input class="form-check-input" type="checkbox" name="countries[]" value="{{ $country->id }}" id="country_name">
+                          <label class="form-check-label" for="country_name">
+                             {{ $country->country_name }}
                               <br>
-                              <img src="{{ asset('sample_images/ntf_142.svg') }}" alt="国{{ $i }}の国旗" class="flag-sm">
+                              <img src="{{ Storage::url($country->flag_image) }}" alt="No image" class="flag-sm">
                              
                           </label>
                       </div>
@@ -34,6 +34,12 @@
           <div class="button_white">
             <button type="submit">選択完了！</button>
           </div>
+          {{-- エラー表示 --}}
+            @if ($errors->has('countries'))
+            <div class="text-danger mt-2 small">
+                {{ $errors->first('countries') }}
+            </div>
+            @endif
           
       </form>
     </div>

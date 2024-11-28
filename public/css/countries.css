@@ -26,11 +26,15 @@
 
 .country_container h4 {
   color: #28aa9d;
-  font-size:18px;
+  font-size:20px;
 }
 
-p {
-  font-size: 14px;
+p, span{
+  font-size: 18px;
+}
+
+span {
+  font-weight: 700;
 }
 
 .country_container h3 {
@@ -57,4 +61,10 @@ p {
 /* add_country.blade.php---------------------------------- */
 .add_country_container {
   margin: 0 20px !important;
+}
+
+
+/* delete_country_modal.blade.php---------------------------------- */
+.modal button {
+  width:  100px;
 }
