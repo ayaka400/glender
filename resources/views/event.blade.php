@@ -15,15 +15,17 @@
       </div>
       <div class="card_container">
           <div class="card">
+            {{-- イベント名 --}}
             <div class="row title">
-              {{-- イベント名 --}}
               <h2 class="col">{{ $event->event_name }}</h2>
-              <div class="country_name col">
-                <a href="{{ route('countries.show', $event->country->id) }}">
-                  <h5 class="text-end align-items-center">{{ $event->country->country_name }}</h5>
-                </a>
-              </div>
             </div>
+            {{-- 国名 --}}
+            <div class="country_name row">
+              <a href="{{ route('countries.show', $event->country->id) }}">
+                <h5 class="text-end align-items-center">{{ $event->country->country_name }}</h5>
+              </a>
+            </div>
+            
             
             <div class="d-flex justify-content-center">
               @if($event->event_image)

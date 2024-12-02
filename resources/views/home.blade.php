@@ -41,7 +41,7 @@
                             </p>
                             <p class="event_name mb-0 pb-0 fw-bold">
                                 {{ $event->event_name }}
-                                <span>{{ $event->country->country_name }}</span>
+                                <span> ({{ $event->country->country_name }}) </span>
                             </p>
                         @endforeach
                     @endif

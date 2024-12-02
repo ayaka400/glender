@@ -50,7 +50,7 @@
       
           <div class="greetng">
               <h4>主なあいさつ</h4>
-              <div class="card" style="background-color: #8edcd540">
+              <div class="card p-3" style="background-color: #8edcd540">
                 <p>{{ $country->greeting }}</p>
               </div>
           </div>
@@ -88,7 +88,7 @@
                       <div class="col-auto event_picture d-flex flex-column align-items-end">
                         @if($event->event_image)
                             <a href="{{ route('events.show', $event->id) }}">
-                                <img src="{{ asset('storage/' . $event->event_image) }}" alt="{{ $event->name }}" style="max-width: 400px;">
+                                <img src="{{ asset('storage/' . $event->event_image) }}" alt="{{ $event->event_name }}" style="max-width: 400px;" class="mb-0">
                             </a>
                         @else
                             <p>No image</p>

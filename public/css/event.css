@@ -7,14 +7,15 @@
 }
 
 .title h2 {
-  font-size: 30px;
+  font-size: 28px;
   margin: 10px auto;
+  color: #F18C02;
 }
 
-.title h5 {
+.country_name h5 {
   margin-top: 10px;
   color: #2EC4B6;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 

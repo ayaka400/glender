@@ -247,7 +247,7 @@ label.required {
 @media (max-width: 768px) { /* 768px以下のスクリーン幅に適用 */
   .small_events .event_picture img {
       width: 130px; /* 幅を100pxに */
-      height: auto; /* アスペクト比を維持 */
+      height: 80px; /* アスペクト比を維持 */
       object-fit: cover;
   }
 
