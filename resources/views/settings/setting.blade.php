@@ -24,7 +24,7 @@
               
           </div>
           <div class="row mt-5">
-              <a href="#" class="d-flex justify-content-center">
+              <a href="{{ route('user.settings') }}" class="d-flex justify-content-center">
                 <div class="col-auto me-3"><i class="fa-solid fa-user"></i></div>
                 <div class="col-auto">ユーザ情報</div>
               </a>

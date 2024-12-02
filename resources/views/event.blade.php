@@ -26,7 +26,11 @@
             </div>
             
             <div class="d-flex justify-content-center">
-              <img src="{{ asset('storage/' . $event->event_image) }}" alt="Event Image">
+              @if($event->event_image)
+                  <img src="{{ asset('storage/' . $event->event_image) }}" alt="Event Image">
+                @else
+                  <p>No image</p>
+        @endif
             </div>
             
             <div class="event_date row">

@@ -6,6 +6,7 @@ use App\Http\Controllers\CountryController;
 use App\Http\Controllers\SetCountryController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventCountryController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcomes.welcome');
@@ -70,31 +71,6 @@ Route::group(['middleware' => 'auth'], function(){
 
     
 
-    // 未整備Country
-
-    // Route::get('/country', function () {
-    //     return view('countries.country');
-    // });
-
-    // Route::get('/add_country', function () {
-    //     return view('countries.add_country');
-    // });
-
-    // Route::get('/update_country', function () {
-    //     return view('countries.update_country');
-    // });
-
-
-    // Edit Events
-    Route::get('/edit_event_top', function () {
-        return view('edit_events.edit_event_top');
-    })->name('edit_event_top');
-
-    // Route::get('/select_event', function () {
-    //     return view('edit_events.select_event');
-    // })->name('edit_event_select');
-
-
     // Events
     #編集するイベントを選択するページ（イベント一覧）
     Route::get('/event/select_event', [EventController::class, 'index'])->name('events.select');
@@ -117,22 +93,18 @@ Route::group(['middleware' => 'auth'], function(){
     # イベントデータを削除する
     Route::delete('events/{id}/destroy', [EventController::class, 'destroy'])->name('events.destroy');  
 
-    
+    # イベント編集トップ
+    Route::get('/edit_event_top', function () {
+        return view('edit_events.edit_event_top');
+    })->name('edit_event_top');
 
 
 
+    //Users
+    Route::get('/user/settintgs', [UserController::class, 'edit'])->name('user.settings');
+    Route::post('/user/settings', [UserController::class, 'update'])->name('user.settings.update');
 
 
-
-
-          // 未整備Edit Events
-    Route::get('/add_event', function () {
-        return view('edit_events.add_event');
-    });
-
-    Route::get('/update_event', function () {
-        return view('edit_events.update_event');
-    });
 });
 
 

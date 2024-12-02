@@ -58,7 +58,7 @@
         </div>
     </div>
 
-    <h3 class="mt-4 mb-3">{{ $country->country_name }}の行事・祝日一覧</h3>
+    <h3 class="mt-4 mb-3">{{ $country->country_name }}のイベント一覧</h3>
 
     <div class="small_events">
       @forelse ($events as $event)

@@ -60,9 +60,11 @@
                                 </p>
                             </div>
                             <div class="col-auto event_picture d-flex flex-column align-items-end">
-                                {{-- <a href="#"> --}}
+                                @if($event->flag_image)
                                     <img src="{{ asset('storage/' . $event->event_image) }}" alt="{{ $event->name }}">
-                                {{-- </a> --}}
+                                @else
+                                    <p>No image</p>
+                                @endif
                             </div>
                         </div>
                     </div>

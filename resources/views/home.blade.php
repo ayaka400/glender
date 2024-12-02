@@ -97,7 +97,11 @@
                             </div>
                             <div class="col-auto event_picture d-flex flex-column align-items-end">
                                 <a href="{{ route('events.show', $event->id) }}">
-                                    <img src="{{ asset('storage/' . $event->event_image) }}" alt="Event Image">
+                                    @if($event->event_image)
+                                        <img src="{{ asset('storage/' . $event->event_image) }}" alt="Event Image">
+                                    @else
+                                        <p class="text-black">No image</p>
+                                    @endif
                                 </a>
                             </div>
                         </div>

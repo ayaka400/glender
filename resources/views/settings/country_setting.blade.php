@@ -45,7 +45,11 @@
                           </div>
                       
                           <label class="form-check-label" for="country">
+                            @if($country->flag_image)
                               <img src="{{ Storage::url($country->flag_image) }}" alt="No image" class="flag-sm">
+                            @else
+                              <p class="mt-3 ms-3">No image</p>
+                            @endif
                           </label>
                     </div>
                   </div>
