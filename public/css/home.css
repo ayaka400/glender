@@ -45,6 +45,10 @@ p {
   
 }
 
+.event_name h5 {
+  color: #F18C02;
+}
+
 .event_country {
   color: #2EC4B6;
 }

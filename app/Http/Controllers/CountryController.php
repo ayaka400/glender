@@ -72,8 +72,11 @@ class CountryController extends Controller
         // 指定したIDの国を取得
         $country = $this->country->findOrFail($id); // IDが見つからなければ404エラー
 
+        // 関連するイベントを取得
+        $events = $country->events; 
+
         // ビューにデータを渡して表示
-        return view('countries.country', compact('country'));
+        return view('countries.country', compact('country', 'events'));
     }
 
     /**

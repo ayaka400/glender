@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id(); // 主キー
             $table->unsignedBigInteger('user_id'); // ユーザーの外部キー
             $table->unsignedBigInteger('country_id'); // 国の外部キー
+            $table->string('event_name'); //イベント名
             $table->string('event_image')->nullable(); // イベント画像
             $table->date('start_date'); // 開始日
             $table->date('end_date')->nullable(); // 終了日（nullable）

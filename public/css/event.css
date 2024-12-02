@@ -22,6 +22,11 @@
 img {
   margin: 0 0 20px;
   border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .event_container h4 {
@@ -30,7 +35,7 @@ img {
 }
 
 p {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .card_container .greeting {

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\SetCountryController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventCountryController;
 
 Route::get('/', function () {
@@ -16,8 +17,6 @@ Route::group(['middleware' => 'auth'], function(){
 
    // Home
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-    Route::get('/event', [App\Http\Controllers\EventController::class, 'index'])->name('event');
 
 
     // Settings
@@ -71,31 +70,62 @@ Route::group(['middleware' => 'auth'], function(){
 
     
 
-
     // 未整備Country
 
-    Route::get('/country', function () {
-        return view('countries.country');
-    });
+    // Route::get('/country', function () {
+    //     return view('countries.country');
+    // });
 
-    Route::get('/add_country', function () {
-        return view('countries.add_country');
-    });
+    // Route::get('/add_country', function () {
+    //     return view('countries.add_country');
+    // });
 
-    Route::get('/update_country', function () {
-        return view('countries.update_country');
-    });
+    // Route::get('/update_country', function () {
+    //     return view('countries.update_country');
+    // });
 
 
-      // 未整備Edit Events
+    // Edit Events
     Route::get('/edit_event_top', function () {
         return view('edit_events.edit_event_top');
-    });
+    })->name('edit_event_top');
 
-    Route::get('/select_event', function () {
-        return view('edit_events.select_event');
-    });
+    // Route::get('/select_event', function () {
+    //     return view('edit_events.select_event');
+    // })->name('edit_event_select');
 
+
+    // Events
+    #編集するイベントを選択するページ（イベント一覧）
+    Route::get('/event/select_event', [EventController::class, 'index'])->name('events.select');
+
+    # イベント追加ページにアクセスする
+    Route::get('/events/create', [EventController::class, 'create'])->name('events.create');
+
+    # 新しいイベントを保存する
+    Route::post('/events/store', [EventController::class, 'store'])->name('events.store');
+
+     # 特定のイベントの情報を表示する
+     Route::get('/events/{id}/show', [EventController::class, 'show'])->name('events.show');
+
+    # イベント編集ページにアクセスする
+    Route::get('/events/{id}/edit', [EventController::class, 'edit'])->name('events.edit'); 
+
+    # イベントの変更を保存する
+    Route::patch('events/{id}/update', [EventController::class, 'update'])->name('events.update'); 
+
+    # イベントデータを削除する
+    Route::delete('events/{id}/destroy', [EventController::class, 'destroy'])->name('events.destroy');  
+
+    
+
+
+
+
+
+
+
+          // 未整備Edit Events
     Route::get('/add_event', function () {
         return view('edit_events.add_event');
     });

@@ -20,13 +20,13 @@
       </div>
       <div class="edit_event_selection">
           <div class="row mb-4">
-              <a href="#" class=" d-flex justify-content-center button_green">
+              <a href="{{ route('events.create')}}" class=" d-flex justify-content-center button_green">
                 <button type="button">新しいイベントの追加</button>
               </a>
               
           </div>
           <div class="row mt-4">
-              <a href="#" class=" d-flex justify-content-center button_white">
+              <a href="{{ route('events.select') }}" class=" d-flex justify-content-center button_white">
                   <button type="button">作成したイベントの編集</button>
               </a>
         </div>

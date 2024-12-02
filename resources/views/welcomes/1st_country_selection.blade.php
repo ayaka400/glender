@@ -19,8 +19,8 @@
               @foreach ($countries as $country) 
                   <div class="col-5 mb-3 d-flex justify-content-center">
                       <div class="form-check d-flex align-items-center">
-                          <input class="form-check-input" type="checkbox" name="countries[]" value="{{ $country->id }}" id="country_name">
-                          <label class="form-check-label" for="country_name">
+                          <input class="form-check-input" type="checkbox" name="countries[]" value="{{ $country->id }}" id="country_{{ $country->id }}">
+                          <label class="form-check-label" for="country_{{ $country->id }}">
                              {{ $country->country_name }}
                               <br>
                               <img src="{{ Storage::url($country->flag_image) }}" alt="No image" class="flag-sm">

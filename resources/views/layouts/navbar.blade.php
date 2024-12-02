@@ -27,7 +27,7 @@
             @endif
         @else
             <!-- edit icon -->
-            <a href="#" class="nav-link me-4 d-flex align-items-center edit_event">
+            <a href="{{ route('edit_event_top') }}" class="nav-link me-4 d-flex align-items-center edit_event">
                 <i class="fa-solid fa-pen fa-lg"></i>
             </a>
 
