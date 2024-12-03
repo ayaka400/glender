@@ -10,12 +10,11 @@
 
 .card {
   width:100%;
-  padding: 5px;
+  padding: 0px;
 }
 
-.title h2 {
-  font-size: 20px;
-  margin: 10px auto;
+.page_title h2 {
+  font-size: 30px;
 }
 
 .card img {
@@ -26,20 +25,32 @@
 
 .country_container h4 {
   color: #28aa9d;
-  font-size:18px;
+  font-size:20px;
 }
 
-p {
-  font-size: 14px;
+p, span{
+  font-size: 16px;
+}
+
+span {
+  font-weight: 700;
 }
 
 .country_container h3 {
   font-size: 20px;
 }
 
+.country_container h5 {
+  font-size: 20px;
+}
+
 /* small_events */
 .event_country {
   color: #2EC4B6;
+}
+
+.event_name h5 {
+  color: #F18C02;
 }
 
 .event_picture img {
@@ -57,4 +68,10 @@ p {
 /* add_country.blade.php---------------------------------- */
 .add_country_container {
   margin: 0 20px !important;
+}
+
+
+/* delete_country_modal.blade.php---------------------------------- */
+.modal button {
+  width:  100px;
 }

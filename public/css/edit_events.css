@@ -23,14 +23,19 @@
   border-radius: 5px;
   border: none;
   box-shadow: 1px 1px 4px #00000033;
-  height: 30px;
+  height: 40px;
   padding: 10px 0;
 }
+
 
 
 /* small_events */
 .event_country {
   color: #2EC4B6;
+}
+
+.event_name h5 {
+  color: #F18C02;
 }
 
 .event_picture img {
@@ -44,3 +49,13 @@
   transition: opacity 0.3s; /* アニメーションの滑らかさ */
 }
 
+
+/* add.event.blade.php-------------------------------- */
+
+select:focus {
+  outline: none; /* フォーカス時の点線をなくす */
+}
+
+.add_event_container select option {
+  font-size: 16px; /* オプション内の文字サイズも指定 */
+}

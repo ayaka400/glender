@@ -6,7 +6,7 @@
 }
 
 .setting_selection {
-  margin-top: 30vh;
+  margin-top: 25vh;
   font-size: 22px;
 }
 
@@ -70,6 +70,10 @@
   opacity: 0.5;
 }
 
+.country_edit_link i {
+  color: #2EC4B6;
+}
+
 
 /* user_setting.blade.php--------------------------------- */
 
@@ -98,7 +102,7 @@
 }
 
 .user_setting_container button {
-  margin-top: 270px;
+  margin-top: 50px;
 }
 
 

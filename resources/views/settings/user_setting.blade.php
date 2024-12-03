@@ -16,14 +16,15 @@
       </h2>
     </div>
 
-    <form method="POST" action="#" class="p-0 mx-auto">
+    <form method="POST" action="{{ route('user.settings.update')}}" class="p-0 mx-auto">
       @csrf
 
+      {{-- メールアドレス --}}
       <div class="mb-3 user_form">
           <label for="email" class="form-label text-start">メールアドレス</label>
 
           <div>
-              <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+              <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email', $user->email) }}" required autocomplete="email">
 
               @error('email')
                   <span class="invalid-feedback" role="alert">
@@ -33,18 +34,16 @@
           </div>
       </div>
 
+     {{-- パスワード --}}
       <div class="mb-3 user_form">
-          <label for="password" class="form-label text-start">パスワード</label>
+          <label for="password" class="form-label text-start">新しいパスワード</label>
+          <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
-          <div>
-              <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-              @error('password')
-                  <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                  </span>
-              @enderror
-          </div>
+          @error('password')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
       </div>
 
       <div class="row mt-5 mb-0  buttons">
@@ -54,6 +53,13 @@
               </button>
           </div>
       </div>
+
+       {{-- 成功メッセージ --}}
+       @if(session('success'))
+       <div class="alert alert-success mt-3">
+           {{ session('success') }}
+       </div>
+        @endif
   </form>
 
 </div>

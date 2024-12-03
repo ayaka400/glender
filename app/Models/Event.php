@@ -9,7 +9,7 @@ class Event extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'country_id', 'country_name', 'event_image', 'start_date', 'end_date', 'description', 'greeting'];
+    protected $fillable = ['user_id', 'country_id', 'event_name', 'event_image', 'start_date', 'end_date', 'description', 'greeting'];
 
     //一対多リレーション：イベントを追加したユーザ
     public function user() {

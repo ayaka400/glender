@@ -10,45 +10,41 @@
     
 @section('content')
   <div class="event_container">
-      <div class="back_button mt-2">
-        <a href="#">< Back</a>
-      </div>
       <div class="card_container">
           <div class="card">
+            {{-- イベント名 --}}
             <div class="row title">
-              <h2 class="col">〜〜祭り</h2>
-              <div class="country_name col">
-                <a href="#">
-                  <h5 class="text-end align-items-center">ベトナム</h5>
-                </a>
-              </div>
+              <h2 class="col">{{ $event->event_name }}</h2>
+            </div>
+            {{-- 国名 --}}
+            <div class="country_name row">
+              <a href="{{ route('countries.show', $event->country->id) }}">
+                <h5 class="text-end align-items-center">{{ $event->country->country_name }}</h5>
+              </a>
             </div>
             
-            <img src="{{ asset('sample_images/teto.jpg') }}" alt="">
+            
+            <div class="d-flex justify-content-center">
+              @if($event->event_image)
+                  <img src="{{ asset('storage/' . $event->event_image) }}" alt="Event Image">
+                @else
+                  <p>No image</p>
+        @endif
+            </div>
+            
             <div class="event_date row">
                 <h4>イベントの日付・期間</h4>
-                <p>2024/◯/◯</p>
+                <p>{{ \Carbon\Carbon::parse($event->start_date)->format('Y/m/d') }} 〜 
+                  {{ \Carbon\Carbon::parse($event->end_date)->format('Y/m/d') }}</p>
             </div>
             <div class="event_desc">
                 <h4>イベントの概要</h4>
-                <p>文文文文文文文文文文文文文文文文
-                  文文文文文文文文文文文文文文文文
-                </p>
-            </div>
-            <div class="event_desc">
-              <h4>主な過ごし方</h4>
-              <p>文文文文文文文文文文文文文文文文
-                文文文文文文文文文文文文文文文文
-              </p>
+                <p>{{ $event->description }}</p>
             </div>
             <div class="greetng">
                 <h4>お祝いの言葉</h4>
                 <div class="card" style="background-color: #8edcd540">
-                  <p>
-                    ◯◯語の挨拶 <br>
-                    （カタカナ表記） <br>
-                    意味 
-                  </p>
+                  <p>{{ $event->greeting }}</p>
                 </div>
             </div>
             

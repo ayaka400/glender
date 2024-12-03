@@ -16,19 +16,35 @@
           </h2>
       </div>
       <div class="setting_selection">
-          <div class="row mb-4">
-              <a href="#" class=" d-flex justify-content-center">
+          <div class="row">
+              <a href="{{ route('country-setting.show')}}" class="d-flex justify-content-center">
                 <div class="col-auto me-3"><i class="fa-solid fa-globe"></i></div>
                 <div class="col-auto">表示する国</div>
               </a>
               
           </div>
-          <div class="row mt-4">
-              <a href="#" class=" d-flex justify-content-center">
+          <div class="row mt-5">
+              <a href="{{ route('user.settings') }}" class="d-flex justify-content-center">
                 <div class="col-auto me-3"><i class="fa-solid fa-user"></i></div>
                 <div class="col-auto">ユーザ情報</div>
               </a>
-        </div>
+          </div>
+
+          {{-- ユーザページにログアウトボタン --}}
+          <div class="row mt-5">
+              <a href="{{ route('logout') }}" class="d-flex justify-content-center" 
+              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                  <div class="col-auto me-3"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
+                  <div class="col-auto">ログアウト</div>
+              </a>
+          </div>
+          
+
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+          @csrf
+          </form>
+
+
       </div>
   </div>
 @endsection

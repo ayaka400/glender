@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\CountrySeeder;
+use Database\Seeders\EventSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,11 +15,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // データが存在しない場合のみ作成
+        if (!\App\Models\User::where('email', 'test@example.com')->exists()) {
+        \App\Models\User::factory()->create([
+            'email' => fake()->unique()->safeEmail(),
+            'password' => bcrypt('password'),
         ]);
+
+        $this->call(CountrySeeder::class);
+        $this->call(EventSeeder::class);
+        }   
     }
+
 }

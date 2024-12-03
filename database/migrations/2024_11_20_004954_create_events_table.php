@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id(); // 主キー
             $table->unsignedBigInteger('user_id'); // ユーザーの外部キー
             $table->unsignedBigInteger('country_id'); // 国の外部キー
-            $table->string('country_name'); // 国名
-            $table->longText('event_image')->nullable(); // イベント画像 (Base64形式)
+            $table->string('event_name'); //イベント名
+            $table->string('event_image')->nullable(); // イベント画像
             $table->date('start_date'); // 開始日
             $table->date('end_date')->nullable(); // 終了日（nullable）
-            $table->text('description')->nullable()->comment('国の概要'); // イベントの概要
+            $table->text('description')->nullable()->comment('イベントの概要'); // イベントの概要
             $table->text('greeting')->nullable(); // 挨拶文
             $table->timestamps(); // 作成日と更新日
 

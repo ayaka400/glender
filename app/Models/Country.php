@@ -9,7 +9,10 @@ class Country extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['country_name', 'user_id', 'description', 'greeting', 'flag_image'];
+    protected $fillable = [
+        'user_id', 'country_name', 'capital', 'lang', 'relig', 
+        'tourist_spot', 'other_desc', 'greeting', 'flag_image'
+    ];
 
     // 多対多リレーション：ユーザーが選択した国
     public function users() {

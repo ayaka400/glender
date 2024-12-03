@@ -15,9 +15,13 @@ return new class extends Migration
             $table->id(); // 主キー
             $table->unsignedBigInteger('user_id'); // 外部キー（usersテーブルを参照）
             $table->string('country_name'); // 国名
-            $table->text('description')->nullable()->comment('国の概要'); // 概要
+            $table->string('capital')->nullable()->comment('首都'); // 首都
+            $table->string('lang')->nullable()->comment('言語'); // 言語
+            $table->string('relig')->nullable()->comment('宗教'); // 宗教
+            $table->string('tourist_spot')->nullable()->comment('有名な観光地'); // 観光地
+            $table->text('other_desc')->nullable()->comment('その他の概要'); // その他の概要
             $table->text('greeting')->nullable(); // 挨拶
-            $table->longText('flag_image')->nullable(); // 国旗画像 (Base64形式で保存)
+            $table->string('flag_image')->nullable(); // 国旗画像
             $table->timestamps(); // created_at と updated_at
 
             // 外部キー制約（ユーザーが削除されたらそのユーザが登録した国も削除）
