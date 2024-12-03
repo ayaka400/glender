@@ -30,21 +30,24 @@
                   
                   <div class="form-check d-flex align-items-center justify-content-center">
                       {{-- チェックボックス --}}
-                      <input class="form-check-input" type="checkbox" name="countries[]" id="country" value="{{ $country->id}}"
+                      <input class="form-check-input" type="checkbox" name="countries[]" id="country_{{ $country->id }}" value="{{ $country->id}}"
                       {{-- ユーザーが選択中の国にチェック --}}
                       @if(in_array($country->id, $selectedCountries)) 
                           checked 
                       @endif
                       >
 
-                      {{-- 国名と国旗 --}}
+                      {{-- 国名と編集アイコン --}}
                       <div class="d-flex flex-column">
                           <div class="row country_edit_link ms-2">
                               <div class="col-auto p-0 fw-bold">{{ $country->country_name }}</div>
-                              <div class="col p-0"><a href="{{ route('countries.edit', $country->id) }}" class="d-inline"><i class="fa-solid fa-pen"></i></a></div>
+                              <div class="col p-0">
+                                <a href="{{ route('countries.edit', $country->id) }}" class="d-inline"><i class="fa-solid fa-pen"></i></a>
+                              </div>
                           </div>
                       
-                          <label class="form-check-label" for="country">
+                          {{-- 国旗 --}}
+                          <label class="form-check-label" for="country_{{ $country->id }}">
                             @if($country->flag_image)
                               <img src="{{ Storage::url($country->flag_image) }}" alt="No image" class="flag-sm">
                             @else

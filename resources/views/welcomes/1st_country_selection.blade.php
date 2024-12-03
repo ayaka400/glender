@@ -19,7 +19,10 @@
               @foreach ($countries as $country) 
                   <div class="col-5 mb-3 d-flex justify-content-center">
                       <div class="form-check d-flex align-items-center">
+                          {{-- チェックボックス --}}
                           <input class="form-check-input" type="checkbox" name="countries[]" value="{{ $country->id }}" id="country_{{ $country->id }}">
+
+                          {{-- 国名と国旗 --}}
                           <label class="form-check-label" for="country_{{ $country->id }}">
                              {{ $country->country_name }}
                               <br>

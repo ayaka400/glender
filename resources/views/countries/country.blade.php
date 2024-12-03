@@ -10,9 +10,6 @@
     
 @section('content')
 <div class="country_container">
-    <div class="back_button mt-2">
-      <a href="javascript:history.go(-1)">< Back</a>
-    </div>
     <div class="page_title text-start d-flex justify-content-start ms-3">
         @if($country->flag_image)
             <img src="{{ Storage::url($country->flag_image) }}" alt="Flag of {{ $country->country_name }}" style="max-width: 300px;">

@@ -10,9 +10,6 @@
     
 @section('content')
   <div class="event_container">
-      <div class="back_button mt-2">
-        <a href="javascript:history.go(-1)">< Back</a>
-      </div>
       <div class="card_container">
           <div class="card">
             {{-- イベント名 --}}
