@@ -48,23 +48,11 @@
                 </div>
             </div>
 
-        {{-- 月表示バー --}}
+        {{-- イベント一覧バー --}}
             <div class="month_bar p-0 ms-auto d-flex align-items-center justify-content-center">
-                <div class="calnder_select">
-                    {{-- <i class="fa-solid fa-calendar-days fa-2x text-secondary ms-3 calender_button"></i> --}}
-                </div>
                 <div class="this_month">
-                    <h3 class="my-auto">
-                        {{-- <span><i class="fa-solid fa-caret-left"></i></span> --}}
-                        イベント一覧
-                        {{-- &nbsp; 11月 &nbsp; --}}
-                        {{-- <span><i class="fa-solid fa-caret-right"></i></span> --}}
-                    </h3>
+                    <h3 class="my-auto">イベント一覧</h3>
                 </div>
-        
-      
-                    
-        
             </div>
 
         {{-- イベント一覧 --}}
@@ -115,17 +103,5 @@
     </div>
 </div>
 
-{{-- <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // 現在以降のイベント要素を取得
-        const currentEvent = document.querySelector('.current-event');
-        if (currentEvent) {
-            // スクロール対象のリストを取得
-            const eventList = document.getElementById('event-list');
-            // 現在以降のイベントにスクロール
-            eventList.scrollTop = currentEvent.offsetTop - eventList.offsetTop;
-        }
-    });
-</script> --}}
 
 @endsection
