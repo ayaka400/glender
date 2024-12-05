@@ -34,8 +34,12 @@
             
             <div class="event_date row">
                 <h4>イベントの日付・期間</h4>
-                <p>{{ \Carbon\Carbon::parse($event->start_date)->format('Y/m/d') }} 〜 
-                  {{ \Carbon\Carbon::parse($event->end_date)->format('Y/m/d') }}</p>
+                @if($event->end_date)
+                    <p>{{ \Carbon\Carbon::parse($event->start_date)->format('Y/m/d') }} 〜 
+                      {{ \Carbon\Carbon::parse($event->end_date)->format('Y/m/d') }}</p>
+                @else
+                    <p>{{ \Carbon\Carbon::parse($event->start_date)->format('Y/m/d') }}</p>
+                @endif
             </div>
             <div class="event_desc">
                 <h4>イベントの概要</h4>
