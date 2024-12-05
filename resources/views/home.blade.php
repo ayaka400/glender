@@ -77,11 +77,12 @@
                         </div>
                         <div class="row">
                             <div class="col event_left">
-                                <p class="event_date my-0 py-0">
-                                  {{ \Carbon\Carbon::parse($event->start_date)->format('Y/m/d') }} 〜 
-                                  {{ \Carbon\Carbon::parse($event->end_date)->format('Y/m/d') }}
-                              </p>
-                                </p>                              
+                                @if($event->end_date)
+                                    <p>{{ \Carbon\Carbon::parse($event->start_date)->format('Y/m/d') }} 〜 
+                                    {{ \Carbon\Carbon::parse($event->end_date)->format('Y/m/d') }}</p>
+                                @else
+                                    <p>{{ \Carbon\Carbon::parse($event->start_date)->format('Y/m/d') }}</p>
+                                @endif                              
                             </div>
                             <div class="col-auto event_picture d-flex flex-column align-items-end">
                                 <a href="{{ route('events.show', $event->id) }}">
